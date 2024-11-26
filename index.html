@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input {
+            border: 1px solid black;
+            width: 90%;
+            height: 35px;
+            border-radius: 3px;
+
+        }
+
+        span {
+            color: red;
+            display: flex;
+            justify-content: center;
+            /* text-align: center; */
+            /* margin-left: 30px; */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-800">
+    <div class="h-96 w-80 pl-1 m-auto mt-32 bg-white">
+            <!-- <form onsubmit="(e) => submitData(e)"> -->
+            <h1 class="font-bold text-4xl text-center pt-4">Form</h1>
+            <input  id="username" oninput="funName()" class="mt-7 ml-3" type="text" required name="username" placeholder="Name">
+            <span style="display: none;" class="text-center" id="errorname">At least 6 characters</span>
+            <input id="password" oninput="funPass()" class="mt-3 ml-3" type="password" required name="password" placeholder="password">
+            <span style="display: none;" class="text-center" id="errorpassword">At least 8 characters</span>
+            <input id="email" oninput="emailFun()" class="mt-3 ml-3" type="email" required name="email" placeholder="Email">
+            <span style="display: none;" id="emailerror" class="text-center">incorrect Email</span>
+            
+            <input id="genderFemale" class="w-4 ml-3 mt" type="radio" name="gender" required value="male">
+            <label>male</label>
+            <input id="gender" class="w-4 ml-3 mt" type="radio" name="gender" required value="female">
+            <label>female</label>
+            <br>
+            <select id="cities" class="mt-5 ml-3" name="city" required>
+                <option value="Tharparkur">Tharparkur</option>
+                <option value="Dadu">Dadu</option>
+                <option value="mehar">Mehar</option>
+                <option value="karachi">karachi</option>
+            </select>
+            <button onclick="submitData()">Submit</button>
+        <!-- </form> -->
+        </div>
+
+</body>
+<script src="App.js"></script>
+
+</html>
